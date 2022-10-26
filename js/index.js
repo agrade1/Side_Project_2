@@ -62,11 +62,16 @@ $(function () {
     new Swiper('.swiper1', {
         pagination: {
             el: '.swiper-pagination',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
         slidesPerView:1.5,
         breakpoints:{
             500:{
-                slidesPerView:1.2
+                slidesPerView:1.1
             },
             767:{
                 slidesPerView:1.4
