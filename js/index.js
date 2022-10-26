@@ -22,15 +22,15 @@ $(function () {
     // let hidden = $('.w_banner_wrap');
     // hidden.height($('.w_banner>li>img').height())
 
-    let hidden2 = $('.program_wrap');
-    hidden2.height($('.program').height())
+    // let hidden2 = $('.program_wrap');
+    // hidden2.height($('.program').height())
 
-    $(window).on('resize', function(){
-        // let wBanner = $('.w_banner').outerHeight();
-        let pBanner = $('.program').outerHeight();
-        // hidden.css('height',wBanner);
-        hidden2.css('height',pBanner);
-    })
+    // $(window).on('resize', function(){
+    //     let wBanner = $('.w_banner').outerHeight();
+    //     let pBanner = $('.program').outerHeight();
+    //     hidden.css('height',wBanner);
+    //     hidden2.css('height',pBanner);
+    // })
 
     //검색 아이콘 클릭시 검색창 내려오기
     $('.search').click(function () {
@@ -63,26 +63,38 @@ $(function () {
         pagination: {
             el: '.swiper-pagination',
         },
-        slidesPerView:1.2,
+        slidesPerView:1.5,
+        breakpoints:{
+            500:{
+                slidesPerView:1.2
+            },
+            767:{
+                slidesPerView:1.4
+            },
+            1400:{
+                slidesPerView:1.2
+            },
+            1740:{
+                slidesPerView:1.3
+            },
+        },
         loop:false,
         spaceBetween : 20,
-        // slidesOffsetBefore: 20
     })
-    // new Swiper('.swiper2',{
-    //     spaceBetween: 10,
-    //     breakpoints:{
-    //         519:{
-    //             slidesPerView:2
-    //         },
-    //         767:{
-    //             slidesPerView:3
-    //         },
-    //         1024:{
-    //             slidesPerView:4
-    //         },
-    //         3000:{
-    //             slidesPerView:5
-    //         },
-    //     }
-    // })
+    new Swiper('.swiper2',{
+        spaceBetween : 20,
+        breakpoints:{
+            767:{
+                slidesPerView:1.3
+            },
+            1024:{
+                slidesPerView:2,
+                allowTouchMove:true
+            },
+            3000:{
+                slidesPerView:3,
+                allowTouchMove:false
+            },
+        }
+    })
 });

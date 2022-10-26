@@ -156,25 +156,12 @@ header .innerbox #nav>li a {
     background-color: #b7b1aa;
 }
 .what_wrap>.whats_on .w_banner_wrap {
-    width: 50vw;
-    max-height: 375px;
+    width: 50%;
     position: absolute;
     right: 0;
     bottom: 50%;
     transform: translateY(50%);
     z-index: 1000;
-}
-.what_wrap>.whats_on .w_banner_wrap  .w_banner{
-    width: 370%;
-    height: 100%;
-    display: flex;
-}
-.what_wrap>.whats_on .w_banner_wrap  .w_banner li{
-    /* max-width: 650px; */
-    width: 20%;
-}
-.swiper-slide{
-    max-width: 650px !important;
 }
 .what_wrap>.whats_on .w_banner_wrap .w_banner li img{
     width: 100%;
@@ -247,18 +234,11 @@ header .innerbox #nav>li a {
 .visit_wrap .vi_banner h3{
     border-bottom: 1px solid #333;
 }
-.visit_wrap .vi_banner .scroll_hidden{
-    height: 380px;
-    margin-top: 20px;
-}
 .visit_wrap .vi_banner .program{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    top: 10px;
 }
 .visit_wrap .vi_banner .program li{
     padding-top: 3px;
-    width: 32%;
 }
 .visit_wrap .vi_banner .program li>img{
     width: 100%;
@@ -460,15 +440,12 @@ header .innerbox #nav>li a {
     }
     .visit_wrap .vi_banner h3{
         font-size: 1.5em;
-        width: 98%;
         margin: 0 auto;
     }
     .visit_wrap .vi_banner .program{
-        width: 150%;
-        justify-content: space-around;
+        /* justify-content: space-around; */
     }
     .visit_wrap .vi_banner .program .vi_text a img{
-        height: 40%;
     }
     .exhibi_wrap{
         height: auto;
@@ -593,6 +570,8 @@ header .innerbox #nav>li a {
     .visit_wrap .vi_text>div:last-child .textBox{
         text-align: left;
         width: auto;
+    }.visit_wrap .vi_banner .program_wrap{
+        margin: 0 10px;
     }
     .visit_wrap .vi_banner .program .vi_text{
         font-size: 1.2em;
@@ -602,18 +581,18 @@ header .innerbox #nav>li a {
         height: 70vw;
         background-position: 5%;
     }
-    .advertisement .ad_text{
+    .advertisement .add_text{
         width: 100%;
         min-width: 0;
         height: 100%;
         padding: 0;
         text-align: center;
     }
-    .advertisement .ad_text p{
+    .advertisement .add_text p{
         padding-top: 27vw;
         padding-bottom: 50px;
     }
-    .advertisement .ad_text .more{
+    .advertisement .add_text .more{
         position: unset;
         margin: 0 auto;
     }
