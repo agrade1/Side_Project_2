@@ -1,0 +1,63 @@
+/* om_intro - 전시 소개 */
+.om_intro{
+    
+}
+.om_intro>h2{
+    font-size: 3em;
+    margin: 50px 0 30px 20px;
+}
+.om_intro>.om_intro_text{
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.om_intro>.om_intro_text>.infor_text{
+    width: 100%;
+    padding-right: 33%;
+    word-break: keep-all;
+}
+.om_intro>.om_intro_text>.infor_text>span{
+    display: block;
+}
+.om_intro>.om_intro_text>.period{
+    margin-top: 10px;
+    font-size: 1.3em;
+}
+.om_intro>.om_intro_text>.period>strong{
+    padding-right: 30px;
+    position: relative;
+}
+.om_intro>.om_intro_text>.period>strong::after{
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background-color: #333;
+}
+.om_intro>.om_intro_text>.more{
+    width: 250px;
+}
+.om_intro>.om_intro_img{
+    width: 100%;
+    display: flex;
+    margin-top: 80px;
+}
+.om_intro>.om_intro_img>.imgBox{
+    width: 80%;
+    height: 45vw;
+    max-height: 740px;
+    background-image: url(../images/old_master_meet_banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.om_intro>.om_intro_img>span{
+    display: inline;
+    font-size: 1.3em;
+}
