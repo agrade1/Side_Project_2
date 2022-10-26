@@ -166,8 +166,9 @@ header .innerbox #nav>li a {
 .what_wrap>.whats_on .w_banner_wrap .w_banner li img{
     width: 100%;
 }
-.what_wrap>.whats_on .pager{
-    display: flex;
+.what_wrap>.whats_on .pager_wrap{
+    width: 150px;
+    height: 30px;
     position: absolute;
     bottom: 8%;
     right: 25%;
@@ -176,25 +177,31 @@ header .innerbox #nav>li a {
     font-size: 1.1em;
     font-weight: bold;
 }
-.what_wrap>.whats_on .pager li{
-    align-items: center;
+.what_wrap>.whats_on .pager_wrap div{
+    z-index: 0;
 }
-.what_wrap>.whats_on .pager li:first-child>a,
-.what_wrap>.whats_on .pager li:last-child>a{
+.what_wrap>.whats_on .pager_wrap .arrow{
+    display: flex;
+    justify-content: space-between;
+}
+.what_wrap>.whats_on .pager_wrap .arrow li{
+    align-items: center;
     display: block;
-    width: 22px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
+}
+.what_wrap>.whats_on .pager_wrap .arrow li a{
+    display: block;
+    width: 30px;
+    height: 30px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
-.what_wrap>.whats_on .pager li:nth-child(2){
-    padding: 0 20px;
-}
-.what_wrap>.whats_on .pager .prev{
+.what_wrap>.whats_on .pager_wrap .arrow .leftarrow a{
     background: url(../images/icon/arrow-left-line.svg);
 }
-.what_wrap>.whats_on .pager .next{
+.what_wrap>.whats_on .pager_wrap .arrow .rightarrow a{
     background: url(../images/icon/arrow-right-line.svg);
 }
 .visit_wrap{
@@ -532,14 +539,14 @@ header .innerbox #nav>li a {
         max-width: 330px;
     }
     /* what'on pager 위치조정 및 색상 변경 */
-    .what_wrap>.whats_on .pager{
+    .what_wrap>.whats_on .pager_wrap{
         color: white;
         bottom: 25%;
     }
-    .what_wrap>.whats_on .pager .prev{
+    .what_wrap>.whats_on .pager_wrap .arrow .leftarrow a{
         background: url(../images/icon/arrow-left-line-w.svg);
     }
-    .what_wrap>.whats_on .pager .next{
+    .what_wrap>.whats_on .pager_wrap .arrow .rightarrow a{
         background: url(../images/icon/arrow-right-line-w.svg);
     }
     /* innerbox padding 제거 */
