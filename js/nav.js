@@ -9,6 +9,7 @@ $(function () {
     //ham버튼 클릭시 mnav 슬라이드 되기
     $('.hamBtn').click(function () {
         $('.mnav_wrap').animate({ left: 0 }, 600);
+        $(".m_text").css('height',$('.mnav_mid').height() - $('#mnav').height()+"px")
     });
     $('.mnav_top>.close').click(function () {
         $('.mnav_wrap').animate({ left: '100%' }, 600);
@@ -24,5 +25,4 @@ $(function () {
         $(this).toggleClass('up');
         up = i;
     });
-    $('.m_text').height($('.mnav_mid').height() - $('#mnav').height());
 });

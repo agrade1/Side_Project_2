@@ -42,6 +42,7 @@ $(function () {
     //ham버튼 클릭시 mnav 슬라이드 되기
     $('.hamBtn').click(function () {
         $('.mnav_wrap').animate({ left: 0 }, 600);
+        $(".m_text").css('height',$('.mnav_mid').height() - $('#mnav').height()+"px")
     });
     $('.mnav_top>.close').click(function () {
         $('.mnav_wrap').animate({ left: '100%' }, 600);
@@ -62,43 +63,52 @@ $(function () {
     new Swiper('.swiper1', {
         pagination: {
             el: '.swiper-pagination',
-            type: 'fraction',
+            type: 'custom',
+            renderCustom: function (swiper, current, total) {
+                return current + '/' + (total - 1);
+            }
         },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-        slidesPerView:1.5,
-        breakpoints:{
-            500:{
-                slidesPerView:1.1
+        slidesPerView: 1.5,
+        breakpoints: {
+            500: {
+                slidesPerView: 1.1
             },
-            767:{
-                slidesPerView:1.4
+            767: {
+                slidesPerView: 1.4
             },
-            1400:{
-                slidesPerView:1.2
+            1400: {
+                slidesPerView: 1.2
             },
-            1740:{
-                slidesPerView:1.3
+            1740: {
+                slidesPerView: 1.3
             },
         },
-        loop:false,
-        spaceBetween : 20,
+        spaceBetween: 20,
+        on: {
+            slideChange: function () {
+                $(".what_text>li").removeClass("active");
+                $(".what_text>li").eq(this.realIndex).addClass("active");
+            },
+        },
+
     })
-    new Swiper('.swiper2',{
-        spaceBetween : 20,
-        breakpoints:{
-            767:{
-                slidesPerView:1.3
+    new Swiper('.swiper2', {
+        spaceBetween: 20,
+        breakpoints: {
+            767: {
+                slidesPerView: 1.3
             },
-            1024:{
-                slidesPerView:2,
-                allowTouchMove:true
+            1024: {
+                slidesPerView: 2,
+                allowTouchMove: true
             },
-            3000:{
-                slidesPerView:3,
-                allowTouchMove:false
+            3000: {
+                slidesPerView: 3,
+                allowTouchMove: false
             },
         }
     })

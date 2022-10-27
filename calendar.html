@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header_footer.css">
-    <link rel="stylesheet" href="css/exhibi.css">
-    <title>전시</title>
+    <link rel="stylesheet" href="css/calendar.css">
+    <title>celendar</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/calendar.js"></script>
 </head>
+</head>
+
 <body>
     <div class="search_wrap">
         <div class="innerbox">
@@ -142,81 +146,131 @@
             <li><img src="images/icon/next.png" alt="next"></li>
             <li><a href="#">현재 전시</a></li>
         </ul>
-        <section class="innerbox">
-            <h2>현재 전시</h2>
-            <div class="exhibi_wrap">
-                <div class="imgBox"></div>
-                <div class="textBox">
-                    <h3>MOMA</h3>
-                    <strong>시대의 거장을 만나다.</strong>
-                    <span>2022.07.13 ~ 2022.08.15</span>
-                    <p>
-                        <span>관람시간 : 연중무휴 10:00 ~ 20:00</span>
-                        <span>입장마감 : 19:00</span>
-                        <span>※ 모든 전시는 현장 예매가 가능합니다.</span>
-                        <span>※ 단 온라인으로 예매할 경우에만 회원할인이 가능합니다.</span>
-                    </p>
-                    <div class="more_wrap">
-                        <a class="more" href="#">자세히보기</a>
-                        <a class="more" href="#">예매하기</a>
+        <div class="content">
+            <div class="innerbox">
+                <h1>Calendar</h1>
+                <div class="calendar_wrap">
+                    <div class="cMove">
+                        <ul>
+                            <li><a href="#" class="prevBtn"><img src="images/icon/arrow-left-bold.svg" alt=""></a></li>
+                            <li><span class="title"></span></li>
+                            <li><a href="#" class="nextBtn"><img src="images/icon/arrow-right-bold.svg" alt=""></a></li>
+                        </ul>
+                        <table id="calendar">
+                            <thead>
+                                <tr>
+                                    <th>일</th>
+                                    <th>월</th>
+                                    <th>화</th>
+                                    <th>수</th>
+                                    <th>목</th>
+                                    <th>금</th>
+                                    <th>토</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div class="check_wrap">
+                            <article>
+                                <input type="checkbox" id="check1">
+                                <label for="check1"></label>
+                                <span>All</span>
+                            </article>
+                            <article>
+                                <input type="checkbox" id="check2">
+                                <label for="check2"></label>
+                                <span>Exhibition</span>
+                            </article>
+                            <article>
+                                <input type="checkbox" id="check3">
+                                <label for="check3"></label>
+                                <span>Program</span>
+                            </article>
+                            <article>
+                                <input type="checkbox" id="check4">
+                                <label for="check4"></label>
+                                <span>Children</span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="exhibi_info_wrap">
+                        <h2></h2>
+                        <div class="scrollhidden">
+                            <div class="scrollY">
+                                <ul class="exhibi_info">
+                                    <li>
+                                        <div class="textbox">
+                                            <span>전시</span>
+                                            <strong>시대의 거장을 만나다.</strong>
+                                            <p>
+                                                <span>장소 : MOMA</span>
+                                                <span>기간 : 2022.07.16 ~ 2022.08.24</span>
+                                            </p>
+                                        </div>
+                                        <a href="#" class="more">자세히보기</a>
+                                    </li>
+                                    <li>
+                                        <div class="textbox">
+                                            <span>전시</span>
+                                            <strong>시대의 거장을 만나다.</strong>
+                                            <p>
+                                                <span>장소 : MOMA</span>
+                                                <span>기간 : 2022.07.16 ~ 2022.08.24</span>
+                                            </p>
+                                        </div>
+                                        <a href="#" class="more">자세히보기</a>
+                                    </li>
+                                    <li>
+                                        <div class="textbox">
+                                            <span>전시</span>
+                                            <strong>시대의 거장을 만나다.</strong>
+                                            <p>
+                                                <span>장소 : MOMA</span>
+                                                <span>기간 : 2022.07.16 ~ 2022.08.24</span>
+                                            </p>
+                                        </div>
+                                        <a href="#" class="more">자세히보기</a>
+                                    </li>
+                                    <li>
+                                        <div class="textbox">
+                                            <span>전시</span>
+                                            <strong>시대의 거장을 만나다.</strong>
+                                            <p>
+                                                <span>장소 : MOMA</span>
+                                                <span>기간 : 2022.07.16 ~ 2022.08.24</span>
+                                            </p>
+                                        </div>
+                                        <a href="#" class="more">자세히보기</a>
+                                    </li>
+                                    <li>
+                                        <div class="textbox">
+                                            <span>전시</span>
+                                            <strong>시대의 거장을 만나다.</strong>
+                                            <p>
+                                                <span>장소 : MOMA</span>
+                                                <span>기간 : 2022.07.16 ~ 2022.08.24</span>
+                                            </p>
+                                        </div>
+                                        <a href="#" class="more">자세히보기</a>
+                                    </li>
+                                    <li>
+                                        <div class="textbox">
+                                            <span>전시</span>
+                                            <strong>시대의 거장을 만나다.</strong>
+                                            <p>
+                                                <span>장소 : MOMA</span>
+                                                <span>기간 : 2022.07.16 ~ 2022.08.24</span>
+                                            </p>
+                                        </div>
+                                        <a href="#" class="more">자세히보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="exhibi_wrap">
-                <div class="imgBox"></div>
-                <div class="textBox">
-                    <h3>MOMA</h3>
-                    <strong>시대의 거장을 만나다.</strong>
-                    <span>2022.07.13 ~ 2022.08.15</span>
-                    <p>
-                        <span>관람시간 : 연중무휴 10:00 ~ 20:00</span>
-                        <span>입장마감 : 19:00</span>
-                        <span>※ 모든 전시는 현장 예매가 가능합니다.</span>
-                        <span>※ 단 온라인으로 예매할 경우에만 회원할인이 가능합니다.</span>
-                    </p>
-                    <div class="more_wrap">
-                        <a class="more" href="#">자세히보기</a>
-                        <a class="more" href="#">예매하기</a>
-                    </div>
-                </div>
-            </div>
-            <div class="exhibi_wrap">
-                <div class="imgBox"></div>
-                <div class="textBox">
-                    <h3>MOMA</h3>
-                    <strong>시대의 거장을 만나다.</strong>
-                    <span>2022.07.13 ~ 2022.08.15</span>
-                    <p>
-                        <span>관람시간 : 연중무휴 10:00 ~ 20:00</span>
-                        <span>입장마감 : 19:00</span>
-                        <span>※ 모든 전시는 현장 예매가 가능합니다.</span>
-                        <span>※ 단 온라인으로 예매할 경우에만 회원할인이 가능합니다.</span>
-                    </p>
-                    <div class="more_wrap">
-                        <a class="more" href="#">자세히보기</a>
-                        <a class="more" href="#">예매하기</a>
-                    </div>
-                </div>
-            </div>
-            <div class="exhibi_wrap">
-                <div class="imgBox"></div>
-                <div class="textBox">
-                    <h3>MOMA</h3>
-                    <strong>시대의 거장을 만나다.</strong>
-                    <span>2022.07.13 ~ 2022.08.15</span>
-                    <p>
-                        <span>관람시간 : 연중무휴 10:00 ~ 20:00</span>
-                        <span>입장마감 : 19:00</span>
-                        <span>※ 모든 전시는 현장 예매가 가능합니다.</span>
-                        <span>※ 단 온라인으로 예매할 경우에만 회원할인이 가능합니다.</span>
-                    </p>
-                    <div class="more_wrap">
-                        <a class="more" href="#">자세히보기</a>
-                        <a class="more" href="#">예매하기</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     </div>
     <footer>
         <div class="innerbox">
@@ -253,4 +307,5 @@
         </div>
     </footer>
 </body>
+
 </html>
