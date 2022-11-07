@@ -103,7 +103,6 @@ header .innerbox #nav .sub {
     width: 520px;
     height: 60px;
     line-height: 60px;
-    border-bottom: 1px solid #333;
 }
 header .innerbox #nav .sub>li {
     float: left;
@@ -261,7 +260,6 @@ footer .innerbox .foot_quick .foot_sns li:last-child{
         line-height: 90px;
         font-size: 2.2em;
         font-weight: 500;
-        border-bottom: 1px solid #333;
         background : url(../images/icon/arrow-down.png) no-repeat 95% center;
         background-size: 35px 35px;
     }
@@ -275,7 +273,6 @@ footer .innerbox .foot_quick .foot_sns li:last-child{
         display: none;
         text-indent: 80px;
         font-size: 1.3em;
-        border-bottom: 1px solid #333;
     }
     header .innerbox .mnav_wrap .mnav_mid .msub li{
         background-color: #eee;
@@ -354,6 +351,7 @@ footer .innerbox .foot_quick .foot_sns li:last-child{
     }
     footer .innerbox .foot_text{
         order: 3;
+        margin: 0;
     }
     footer .innerbox .foot_quick{
         margin: 30px 0;

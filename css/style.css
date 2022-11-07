@@ -2,9 +2,8 @@
 header{
     position: absolute;
 }
-header .innerbox,
-header .innerbox #nav .sub {
-    border-bottom: 1px solid white !important;
+header .innerbox{
+    border-bottom: none;
 }
 header .innerbox #nav>li a {
     color: white !important; 
@@ -141,9 +140,18 @@ header .innerbox #nav>li a {
     width: 50%;
     position: absolute;
     right: 0;
-    bottom: 50%;
+    bottom: 45%;
     transform: translateY(50%);
     z-index: 1000;
+    overflow: hidden;
+}
+.bx-viewport {
+    overflow: unset !important;
+}
+.what_wrap>.whats_on .w_banner_wrap .w_banner li{
+    width: 40vw !important;
+    min-width: 540px;
+    max-width: 700px;
 }
 .what_wrap>.whats_on .w_banner_wrap .w_banner li img{
     width: 100%;
@@ -152,7 +160,7 @@ header .innerbox #nav>li a {
     width: 150px;
     height: 30px;
     position: absolute;
-    bottom: 8%;
+    bottom: 4%;
     right: 25%;
     transform: translateX(50%);
     z-index: 1000;
@@ -169,7 +177,6 @@ header .innerbox #nav>li a {
 .what_wrap>.whats_on .pager_wrap .arrow li{
     align-items: center;
     display: block;
-    width: 30px;
     height: 30px;
 }
 .what_wrap>.whats_on .pager_wrap .arrow li a{
@@ -386,16 +393,6 @@ header .innerbox #nav>li a {
     margin-top: 50px;
     background: none;
 }
-@media screen and (max-width:1865px) {
-    .what_wrap>.whats_on .w_banner_wrap .scrollX .w_banner li{
-        min-width: 540px;
-    }
-}
-@media screen and (max-width:1453px){
-    .visit_wrap .vi_banner .scroll_hidden{
-        height: 26vw;
-    }
-}
 @media screen and (max-width:1024px) {
     #mainBanner>.banner_text{
         width: 45%;
@@ -408,6 +405,7 @@ header .innerbox #nav>li a {
         margin: 30px 0 70px 30px;
     }
     /* what'on 텍스트 여백 조절 */
+
     .what_wrap>.whats_on .what_text{
         height: 420px;
     }
@@ -427,7 +425,7 @@ header .innerbox #nav>li a {
         margin-top: 70px;
     }
     /* what'on 배너 슬라이드 위치조절 */
-    .what_wrap>.whats_on .w_banner_wrap .scrollX .w_banner li{
+    .what_wrap>.whats_on .w_banner_wrap .w_banner li{
         min-width: 380px;
     }
     .visit_wrap .vi_banner h3{
@@ -516,10 +514,7 @@ header .innerbox #nav>li a {
         width: 82vw;
         bottom: -20px;
     }
-    .what_wrap>.whats_on .w_banner_wrap .scrollX .w_banner{
-        gap: 20px;
-    }
-    .what_wrap>.whats_on .w_banner_wrap .scrollX .w_banner li{
+    .what_wrap>.whats_on .w_banner_wrap .w_banner li{
         min-width: 250px;
         max-width: 330px;
     }
